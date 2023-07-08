@@ -258,9 +258,9 @@ input {
   transform: translateX(100%);
 }
 
-body {
-
-  font-family: 'Montserrat', sans-serif;
+.body {
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -271,7 +271,7 @@ nav {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   top: 0;
   left: 0;
-  width: 100%;
+
   z-index: 9998;
   transition: all 0.5s;
   display: flex;

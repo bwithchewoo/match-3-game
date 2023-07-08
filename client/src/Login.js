@@ -39,7 +39,7 @@ function Login({ onLogin }) {
 
     return (
         <div className="body">
-            <div>Match 3 Game</div>
+            <div style={{ fontWeight: "bold", fontSize: "xx-large" }}>Match 3 Game</div>
             <div className={`container ${showLogin ? "" : "right-panel-active"}`} id="container">
                 <div className={`form-container ${showLogin ? 'sign-in-container' : 'sign-up-container'}`}>
                     {showLogin ? (

@@ -1,7 +1,8 @@
 const Profile = ({ user }) => {
     function renderAchievements() {
+        console.log(user.achievements)
         if (user.achievements.length !== 0) {
-            user.achievements.map(achievement => {
+            return user.achievements.map(achievement => {
                 return <div>{achievement.achievement_name}: {achievement.achievement_description}</div>
             })
         } else {

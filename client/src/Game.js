@@ -80,7 +80,7 @@ function Game({ user }) {
                     }),
                 })
                     .then((r) => {
-                        const hasAnemo100 = user.achievements.find(element => element.achievement_id === 12)
+                        const hasAnemo100 = user.achievements.find(element => element.achievement_id === 1)
                         if (!hasAnemo100 && anemoScore >= 100) {
                             fetch("/user_achievements", {
                                 method: "POST",
@@ -89,7 +89,7 @@ function Game({ user }) {
                                 },
                                 body: JSON.stringify({
                                     "user_id": user.id,
-                                    "achievement_id": 12
+                                    "achievement_id": 1
                                 }),
                             })
                         }

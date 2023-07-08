@@ -20,15 +20,17 @@ const Profile = ({ user }) => {
         <div>
             <div className="profile">
                 <img src={user.image_url} alt="Profile Picture" width="100px" height="100px"></img>
-                <div>
+                <div style={{ fontWeight: "bold", fontSize: "large" }}>
                     {user.username}
                 </div>
                 <div>
                     Bio: {renderBio()}
                 </div>
             </div>
-            <div className="achievements">
-                Achievements
+            <div className="achievements" style={{ marginTop: "20px" }} >
+                <div style={{ fontWeight: "bold", fontSize: "xx-large" }}>
+                    Achievements
+                </div>
                 {renderAchievements()
                 }
             </div>

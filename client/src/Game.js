@@ -20,7 +20,6 @@ const candyColors = [
     geo,
     hydro,
     pyro
-
 ]
 const horizontalLineClear = caeli
 const verticalLineClear = vultur
@@ -53,7 +52,7 @@ function Game({ user }) {
                     newPieces.push(newPiece)
                 }
             }
-
+            console.log(user)
             fetch(`/updateboard`, {
                 method: "PATCH",
                 headers: {
@@ -859,7 +858,6 @@ function Game({ user }) {
 
 
 
-
     return (
         <div>
             <div className="app">
@@ -870,7 +868,7 @@ function Game({ user }) {
                         })
                     })}
                 </div>
-                <button onClick={resetBoard}>Reset Board</button>
+
                 <div className="scoreboard">
                     <div className="score">
                         <img src={anemo} height="100px" width="100px" />
@@ -898,6 +896,7 @@ function Game({ user }) {
                     </div>
                 </div>
             </div>
+            <button onClick={resetBoard}>Reset Board</button>
         </div>
     );
 }

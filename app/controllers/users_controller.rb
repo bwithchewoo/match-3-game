@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize, only: [:create, :index]
+  skip_before_action :authorize, only: [:create, :index ]
 
   def index
     render json: User.all.pluck(:id, :username)
@@ -13,8 +13,13 @@ class UsersController < ApplicationController
   def show
     render json: @current_user
   end
+#all achievements that are associated to current user with fun in the name
+  def achievement
+    user = User.find_by(id: session[:user_id])
+    funachievement = User.joins(:achievements).where("achievements.achievement_name LIKE ?", "%fun%")
 
-
+    render json: funachievement
+  end
 
   private
 

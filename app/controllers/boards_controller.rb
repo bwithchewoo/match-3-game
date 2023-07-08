@@ -10,6 +10,8 @@ class BoardsController < ApplicationController
     render json: board, status: :created
   end
 
+
+
   def update_score
     board = Board.find(params[:id])
     board.update!({
@@ -34,7 +36,6 @@ def destroy
   head :no_content
 
 end
-
 
   private
 

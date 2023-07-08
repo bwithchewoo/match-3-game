@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   resources :pieces, except: :update
   resources :boards, only: [:index, :create]
+
   resources :achievements, only: [:index, :create]
   resources :user_achievements, only: [:index, :create]
   resources :friendships, only: [ :create]
 delete "/boards/:id", to: "boards#destroy"
   get "/users", to: "users#index"
+  get "/funachievements", to: "users#achievement"
+
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"

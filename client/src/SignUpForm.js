@@ -37,6 +37,7 @@ function SignUpForm({ onLogin }) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1>Create Account</h1>
             <div>
                 <label htmlFor="username">Username</label>
                 <input

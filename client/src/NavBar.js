@@ -12,10 +12,11 @@ function NavBar({ user, setUser }) {
 
   return (
     <div className="navbar">
-      Welcome {user.username}!
-      <Link to="/">Match 3 Game</Link>
-      <Link to="/user_profile">User Profile</Link>
-      <Link to="/friends">Friends</Link>
+      <div style={{ marginTop: "6px" }}>
+        Welcome {user.username}!</div>
+      <Link to="/" style={{ textDecoration: "none", color: "inherit", fontWeight: "bold", marginTop: "6px" }}>Match 3 Game</Link>
+      <Link to="/user_profile" style={{ textDecoration: "none", color: "inherit", fontWeight: "bold", marginTop: "6px" }}>User Profile</Link>
+      <Link to="/friends" style={{ textDecoration: "none", color: "inherit", fontWeight: "bold", marginTop: "6px" }}>Friends</Link>
       <button onClick={handleLogoutClick}>Logout</button>
     </div>
 
